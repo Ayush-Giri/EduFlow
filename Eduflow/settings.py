@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #user defined apps
+    'custom_user',
+
     #third party apps
     'drf_spectacular',
 ]
@@ -134,3 +137,9 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
 }
+
+
+AUTH_USER_MODEL = "custom_user.CustomUser"
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
